@@ -18,13 +18,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            /* Modern Mesh Gradient */
             background-color: #e5e7eb;
-            background-image: 
-                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
-                radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
-                radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
-            background-attachment: fixed;
             color: #1f2937;
         }
 
@@ -41,6 +35,7 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             text-align: center;
             transition: transform 0.3s ease;
+            animation: fadeIn 0.8s ease-out;
         }
 
         .container:hover {
@@ -74,6 +69,7 @@
             font-size: 0.875rem;
             font-weight: 600;
             text-transform: uppercase;
+            margin-bottom: 20px;
         }
 
         /* Subtle Animation */
@@ -82,16 +78,57 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .container {
-            animation: fadeIn 0.8s ease-out;
+        /* ========================= */
+        /* 📱 Responsive Design */
+        /* ========================= */
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+                border-radius: 20px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
         }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 30px;
+            }
+
+            .container {
+                width: 100%;
+                padding: 25px 18px;
+                border-radius: 18px;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+
+            .status-badge {
+                font-size: 0.75rem;
+                padding: 5px 14px;
+            }
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
         <div class="status-badge">Container Active</div>
-        <h1>Bienvenue sur la page p1</h1>
-        <p>Cette interface moderne est propulsée par <strong>Nginx</strong> au sein d'un environnement <strong>Docker</strong> sécurisé.</p>
+        <h1>Welcome to page p1</h1>
+        <p>This interface is powered by <strong>Nginx</strong> within a secure <strong>Docker</strong> environment.</p>
     </div>
 </body>
 </html>
