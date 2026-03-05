@@ -93,6 +93,29 @@
       padding: 20px;
       text-align: center;
     }
+
+    .copy-btn {
+      display: inline-block;
+      background: #8c7ae6; /* Purple shade to differentiate from the blue links */
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s ease;
+      margin-top: 7px;
+      font-size: 14px;
+    }
+
+    .copy-btn:hover {
+      background: #7158e2;
+    }
+
+    .copy-btn:active {
+      transform: scale(0.95);
+    }
   </style>
 </head>
 <body>
@@ -108,6 +131,34 @@
       <p>Création d'une Image Docker avec Nginx</p>
       <a href="reports/Atelier_7_Docker.pdf">Open Atelier 7</a>
       <a href="https://hub.docker.com/repository/docker/msbenyaishe/atelier7-docker-nginx/general">Docker Hub Repository</a>
+    </div>
+
+    <div class="card">
+      <h2>Atelier 8</h2>
+      <p>Développement et Déploiement d’une Application Web Dockerisée</p>
+      <a href="reports/Atelier_8_Docker.pdf">Open Atelier 8</a>
+
+      <button class="copy-btn" onclick="copyDockerCommand(this)">
+        Copy Docker Run Command
+      </button>
+
+      <script>
+        function copyDockerCommand(button) {
+          const command = "docker run -p 4000:4000 msbenyaishe/atelier8-ramadan-app";
+          
+          navigator.clipboard.writeText(command).then(() => {
+            // Optional: Visual feedback
+            const originalText = button.innerText;
+            button.innerText = "Copied!";
+            button.style.background = "#44bd32"; // Success green
+            
+            setTimeout(() => {
+              button.innerText = originalText;
+              button.style.background = "#8c7ae6"; // Back to original color
+            }, 2000);
+          });
+        }
+      </script>
     </div>
   </main>
 
