@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 02</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text-dark: #121212;
+            --text-accent: #7a7a7a;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text-dark);
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .meta {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            color: var(--text-accent);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            line-height: 1.1;
+            margin: 0 0 2rem 0;
+            letter-spacing: -0.05em;
+        }
+
+        .nav-link {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 400;
+            padding-bottom: 4px;
+            border-bottom: 2px solid var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--text-accent);
+            border-bottom-color: var(--text-accent);
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <span class="meta">Section 02</span>
+        <h1>This is Page 2 <br>Interface.</h1>
+        <a href="index.php" class="nav-link">Return to Home →</a>
+    </main>
+
+</body>
+</html>

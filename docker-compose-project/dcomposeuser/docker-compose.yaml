@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+
+  php:
+    image: msbenyaishe/dcomposeapp-php:v1
+    ports:
+      - "80:80"
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: testdb
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
